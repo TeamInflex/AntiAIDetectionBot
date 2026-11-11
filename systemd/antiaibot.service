@@ -1,0 +1,14 @@
+[Unit]
+Description=Anti-AI Detection Guardian Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/AntiAIDetectionBot
+ExecStart=/usr/bin/python3 /root/AntiAIDetectionBot/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

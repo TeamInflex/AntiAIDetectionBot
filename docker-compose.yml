@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  anti-ai-bot:
+    build: .
+    container_name: AntiAIDetectionBot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/app/downloads
+      - ./outputs:/app/outputs
